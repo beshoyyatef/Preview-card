@@ -1,0 +1,199 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+body{
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Cream);
+}
+
+#Product-review{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    min-height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#desc{
+    background-color: var(--White);
+    min-height: 100%;
+    padding: 25px 20px 50px 30px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+span{
+    color: var(--Dark-grayish-blue);
+    letter-spacing: 2px;
+}
+
+h2{
+    color: var(--Very-dark-blue);
+    font-size: 2.3em;
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+    max-width: 250px;
+    margin-top: 20px;
+}
+
+p{
+    max-width: 300px;
+    margin-top: 30px;
+    color: var(--Dark-grayish-blue);
+    letter-spacing: 1px;
+}
+
+ul{
+    display: flex;
+    margin-top: 25px;
+}
+
+li:nth-of-type(1){
+    margin-right: 20px;
+    color: var(--Dark-cyan);
+    font-size: 1.7em;
+    font-family: 'Fraunces', serif;
+}
+
+li:nth-of-type(2){
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+
+#Button{
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    background-color: var(--Dark-cyan);
+    padding: 15px 40px;
+    border-radius: 10px;
+    width: 90%;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: 1s;
+}
+
+#Button:hover{
+    background-color: hsl(158, 62%, 25%)
+}
+
+i{
+    margin-right: 5px;
+}
+
+
+@media (max-width:650px){
+    h2{
+        font-size: 1.8em;
+    }
+    p{
+        font-size: 13px;
+        max-width: 200px;
+    }
+    li:nth-of-type(1){
+        font-size: 1.3em;
+    }
+    li:nth-of-type(2){
+        font-size: 0.8em;
+    }
+    #Button{
+        font-size: 16px;
+    }
+}
+
+@media (max-width:600px){
+    #Product-review{
+        flex-direction: column;
+    }
+    #desc{
+        padding-bottom: 15px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+    img{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+    #image{
+        height: 300px;
+    }
+}
+
+
